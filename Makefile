@@ -37,7 +37,7 @@ test: package
 		--env GDAL_DISABLE_READDIR_ON_OPEN=TRUE \
 		--env CPL_VSIL_CURL_ALLOWED_EXTENSIONS=".TIF,.ovr,.jp2,.tif" \
 		-itd \
-		remotepixel/amazonlinux:gdal2.4-py3.7-geo bash
+		remotepixel/amazonlinux:gdal2.4-jpkak-py3.7-geo bash
 	docker exec -it lambda bash -c 'unzip -q /local/package.zip -d /var/task/'
 	docker exec -it lambda bash -c '/tmp/bin/tests.sh'
 	docker stop lambda

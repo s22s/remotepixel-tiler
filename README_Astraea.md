@@ -4,10 +4,11 @@ Prerequisites:
 - Docker installed locally
 - npm/node installed locally
 - Serverless installed locally (on mac - `brew install serverless`)
-- Serverless configured with
 
 ### Build the deployment package:
 ```bash
+export AWS_ACCESS_KEY_ID=<serverless-deploy-key-id>
+export AWS_SECRET_ACCESS_KEY=<serverless-deploy-access-key>
 docker login
 make package && make test
 npm install

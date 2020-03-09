@@ -1,4 +1,4 @@
-FROM remotepixel/amazonlinux:gdal2.4-py3.7-geo
+FROM remotepixel/amazonlinux:gdal2.4-jpkak-py3.7-geo
 
 WORKDIR /tmp
 

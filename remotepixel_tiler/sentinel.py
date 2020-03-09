@@ -61,8 +61,8 @@ def tilejson_handler(
     tile_url = f"{APP.host}/s2/tiles/{scene}/{{z}}/{{x}}/{{y}}@{tile_scale}x.{tile_format}?{qs}"
 
     scene_params = sentinel2._sentinel_parse_scene_id(scene)
-    sentinel_address = "s3://{}/{}/B{}.jp2".format(
-        sentinel2.SENTINEL_BUCKET, scene_params["key"], "04"
+    sentinel_address = "s3://sentinel-s2-{}/{}/R10m/B{}.jp2".format(
+        scene_params["processingLevel"].lower(), scene_params["key"], "04"
     )
     with rasterio.open(sentinel_address) as src_dst:
         bounds = warp.transform_bounds(

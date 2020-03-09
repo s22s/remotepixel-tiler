@@ -74,3 +74,6 @@ target/
 # Terraform
 .terraform*
 terraform.*
+
+.idea/**
+*.iml
